@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        html {
+            overflow: hidden;
+            position: relative;
+        }
+        .coin_box {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 30vh auto;
+            background-color: #333;
+            display: none;
+        }
+        button {
+            width: 150px;
+            height: 150px;
+            margin: 30vh auto;
+            margin-bottom: 0;
+            display: block;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            position: absolute;
+        }
+        .end_display{
+            display: none;
+            margin: 0 auto;
+            width: 300px
+        }
+        h2{text-align: center; padding-top: 10px}
+        .text_in{width: 75%;}
+        .button{width: 20%;}
+        .rank{padding: 5px; border-bottom: #333 solid 1px; text-align: center; display: block; width: 300px; margin: 0}
+        #result{margin: 0 auto; width: 300px;}
+        .restart{display: none;}
+        /* .timer{position: absolute; color: #fff; text-align: center; left: 38%; top: 39%; font-size: 21px} */
+        /* 21.6 150-10.8 139.2 */
+    </style>
+</head>
+
+<body>
+    <!-- <div id="box1" draggable="true" ondragstart="dragstart(event)" ondrag="dragging(event)" ondragend="dragend(event)"> -->
+    <button onclick="start()" class="start_btn">시작</button>
+    <button onclick="window.location.reload()" class="restart">다시하기</button>
+    <div class="coin_box" ondragover="dragover(event)" ondrop="drop(event)"></div>
+    <h2>TOP 5</h2>
+    <div id="result">
+       
+    </div>
+    <div class="end_display">
+        <input type="text" id='name_input' class="text_in">
+        <input type="button" value="등록하기" onclick="upload()" class="button">
+    </div> 
+</body>
+<script src="js/Jquery.js"></script>
+<script src="js/script.js"></script>
+
+</html>
